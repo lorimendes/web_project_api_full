@@ -1,0 +1,95 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 880px;
+  gap: 20px 17px;
+}
+
+.gallery__photo-card {
+  width: 282px;
+  height: 361px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery__photo {
+  width: 282px;
+  height: 282px;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+}
+
+.gallery__photo-info {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  color: #000;
+  padding: 25px 15px 24px 21px;
+  box-sizing: border-box;
+}
+
+.gallery__photo-caption {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29.05px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 225px;
+}
+
+.gallery__like-button {
+  background-image: url(../images/heart-button.png);
+  width: 21px;
+  border: none;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.gallery__like-button:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.gallery__like-button:active,
+.gallery__like-button_active {
+  background-image: url(../images/solid-heart-button.png);
+  opacity: 100%;
+}
+
+.gallery__remove-button {
+  background-image: url(../images/trash-button.png);
+  width: 18px;
+  height: 19.3px;
+  border: none;
+  background-color: #00000000;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 18px;
+  right: 15px;
+}
+
+.gallery__remove-button:hover {
+  cursor: pointer;
+  opacity: 60%;
+}
+
+@media screen and (max-width: 635px) {
+  .gallery {
+    margin: 0 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+}
