@@ -69,7 +69,6 @@ const handleError = (err, req, res, _next) => {
 };
 
 app.use(cors(corsOptions));
-app.options('*', cors(corsOptions));
 app.use(express.json());
 app.use(requestLogger);
 app.get('/crash-test', () => {
