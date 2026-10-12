@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const { errors } = require('celebrate');
+const cors = require('cors');
 
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const { authenticateToken } = require('./middlewares/auth');
@@ -59,6 +60,8 @@ const handleError = (err, req, res, _next) => {
 
 app.use(express.json());
 app.use(requestLogger);
+app.use(cors());
+app.options('*', cors());
 app.get('/crash-test', () => {
   setTimeout(() => {
     throw new Error('O servidor travará agora');
