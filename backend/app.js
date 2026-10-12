@@ -58,10 +58,10 @@ const handleError = (err, req, res, _next) => {
   return res.status(500).send({ message: 'Ocorreu um erro no servidor' });
 };
 
-app.use(express.json());
-app.use(requestLogger);
 app.use(cors());
 app.options('*', cors());
+app.use(express.json());
+app.use(requestLogger);
 app.get('/crash-test', () => {
   setTimeout(() => {
     throw new Error('O servidor travará agora');
