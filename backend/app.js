@@ -16,6 +16,16 @@ const { createUser, login } = require('./controllers/users');
 const cardsRouter = require('./routes/cards');
 const usersRouter = require('./routes/users');
 
+const corsOptions = {
+  origin: [
+    'https://lorena.estradatech.com',
+    'https://www.lorena.estradatech.com',
+  ],
+  methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
+};
+
 const { PORT = 3000 } = process.env;
 const app = express();
 
@@ -58,8 +68,8 @@ const handleError = (err, req, res, _next) => {
   return res.status(500).send({ message: 'Ocorreu um erro no servidor' });
 };
 
-app.use(cors());
-app.options('*', cors());
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 app.use(express.json());
 app.use(requestLogger);
 app.get('/crash-test', () => {
