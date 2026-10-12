@@ -4,7 +4,7 @@ const getCards = async (req, res, next) => {
   const { _id } = req.user;
 
   try {
-    const cards = await Card.find({ owner: _id });
+    const cards = await Card.find({ owner: _id }).sort({ createdAt: -1 });
     res.status(200).send(cards);
   } catch (err) {
     next(err);
