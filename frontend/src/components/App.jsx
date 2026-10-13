@@ -40,7 +40,7 @@ function App() {
     } else if (status === 400) {
       messageInfoTooltip = "Ops, um dos campos foi preenchido incorretamente.";
     } else if (status === 401) {
-      messageInfoTooltip = "E-mail não encontrado.";
+      messageInfoTooltip = "E-mail e/ou senha incorretos.";
     } else {
       messageInfoTooltip =
         "Ops, algo saiu deu errado! Por favor, tente novamente.";
