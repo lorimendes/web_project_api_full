@@ -60,15 +60,15 @@ Você pode testar a aplicação fullstack rodando em produção no link abaixo:
 
 ### **Login / cadastro:**
 
-_(Insira aqui o print ou GIF da tela de autenticação)_
+![Print da tela de login](./frontend/src/images/print-tela-login.png)
 
 ### **Perfil e galeria:**
 
-_(Insira aqui o print da interface principal com os cards)_
+![Print da tela de perfil](./frontend/src/images/print-tela-perfil.png)
 
 ### Demonstração:
 
-_(Insira aqui o gif)_
+![Demonstração em vídeo](./frontend/src/images/demonstracao-around.png)
 
 ## Autora
 
