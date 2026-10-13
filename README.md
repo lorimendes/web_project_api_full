@@ -68,7 +68,7 @@ Você pode testar a aplicação fullstack rodando em produção no link abaixo:
 
 ### Demonstração:
 
-![Demonstração em vídeo](./frontend/src/images/demonstracao-around.png)
+![Demonstração em vídeo](./frontend/src/images/demonstracao-around.gif)
 
 ## Autora
 
