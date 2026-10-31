@@ -71,11 +71,6 @@ const handleError = (err, req, res, _next) => {
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(requestLogger);
-app.get('/crash-test', () => {
-  setTimeout(() => {
-    throw new Error('O servidor travará agora');
-  }, 0);
-}); // apagar após a revisão
 app.use('/signup', createUserValidator, createUser);
 app.use('/signin', loginValidator, login);
 app.use(authenticateToken);
